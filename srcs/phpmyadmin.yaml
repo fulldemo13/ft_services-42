@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin
+  labels:
+    app: phpmyadmin
+spec:
+  type: LoadBalancer
+  ports:
+    - name: phpmyadmin
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app: phpmyadmin
+    tier: mysql
+  loadBalancerIP: 192.168.99.124
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin
+  labels:
+    app: phpmyadmin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phpmyadmin
+      tier: mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      name: phpmyadmin
+      labels:
+        app: phpmyadmin
+        tier: mysql
+    spec:
+      containers:
+      - name: phpmyadmin
+        image: services-phpmyadmin
+        imagePullPolicy: Never
+        ports:
+          - name: phpmyadmin
+            containerPort: 5000
+        env:
+          - name: PMA_HOST
+            value: mysql
+          - name: PMA_PORT
+            value: "3306"
+          - name: DB_USER
+            value: root
+          - name: DB_PASSWORD
+            value: root

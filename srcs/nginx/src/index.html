@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fulldemo's ft_services</title>
+        <link href="https://projects.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png" rel="icon" type="image/png">
+        <script src="https://kit.fontawesome.com/9a769b63da.js" crossorigin="anonymous"></script>
+        <style>
+            html {
+                font-size: 100%;
+                height: 100%;
+            }
+            body {
+                background: #423144;
+                box-sizing: border-box;
+                color: #ffdbc5;
+                font-family: 'Source Sans Pro', sans-serif;
+                height: 100%;
+                line-height: 1.5;
+                margin: 0;
+                padding: 90px;
+                text-align: center;
+            }
+            h1 {
+                color: #cf1b1b;
+                font-size: 4rem;
+                font-weight: bold;
+                line-height: 1;
+                margin: 0 0 0.2rem 0;
+            }
+            h2 {
+                padding-top: 4rem;
+            }
+            p {
+                margin: 0 0 1rem 0;
+            }
+            h3 {
+                color: #cf1b1b;
+                font-size: 1.2rem;
+                margin: 0 0 1rem 0;
+                text-decoration: none;
+            }
+            a {
+                color: #cf1b1b;
+            }
+            a:hover, a:active {
+                color: #900d0d;
+            }
+            table {
+                margin: auto;
+	            width: 100%;
+	            line-height: 2;
+            }
+            i {
+                color: #f2a07b;
+            }
+            i:hover {
+                color: #c87941;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ft_services</h1>
+        <br/>
+
+        <p>This is the nginx web server. Select a service.</p>
+
+        <h2>Available services:</h2><br/>
+        <table style="text-align:center">
+            <tr style="vertical-align:top">
+                <td>
+                    <a href="http://192.168.99.125:5050"><i class="fab fa-wordpress-simple fa-4x"></i></a>
+                    <h3><a href="http://192.168.99.125:5050">WordPress</a></h3>
+                    <p>user:<em> wp_admin</em><br/>
+                    password:<em> admin</em></p>
+                    <p>user:<em> wp_editor</em><br/>
+                    password:<em> editor</em></p>
+                    <p>user:<em> wp_author</em><br/>
+                    password:<em> author</em></p>
+                </td>
+                <td>
+                    <a href="http://192.168.99.124:5000"><i class="fas fa-database fa-4x"></i></a>
+                    <h3><a href="http://192.168.99.124:5000">phpMyAdmin</a></h3>
+                    <p>user:<em> root</em><br/>
+                    password:<em> root</em></p>
+                </td>
+                <td>
+                    <a href="http://192.168.99.126:3000"><i class="far fa-sun fa-4x"></i></a>
+                    <h3><a href="http://192.168.99.126:3000">Grafana</a></h3>
+                    <p>user:<em> admin</em><br/>
+                    password:<em> admin</em></p>
+                </td>
+            </tr>
+        </table>
+        <table style="text-align:left;padding-top: 100px;padding-left: 150px;">
+            <tr style="vertical-align:top">
+                <td style="padding-right: 90px">
+                    <h3>SSH</h3>
+                    <p>[ssh root@192.168.99.128]<br/>
+                    user:<em> root</em><br/>
+                    password:<em> root</em></p>
+                </td>
+                <td>
+                    <h3>FTPS Server</h3>
+                    <p>upload: [curl ftp://192.168.99.127:21 --ssl -k --user user -T <em>FILE_NAME</em>]<br/>
+                    download: [curl ftp://192.168.99.127:21/<em>FILE_NAME</em> --ssl -k --user user -o <em>direction/FILE_NAME]</em><br/>
+                    user:<em> user</em><br/>
+                    password:<em> user</em></p>
+                </td>
+            </tr>
+        </table>
+        <p style="bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.75rem;">
+            © 2020 fulldemo
+        </p>
+    </body>
+</html>
