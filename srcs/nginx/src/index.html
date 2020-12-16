@@ -47,12 +47,19 @@
                 color: #900d0d;
             }
             table {
+                text-align: left;
                 margin: auto;
-	            width: 100%;
-	            line-height: 2;
+                border:"0";
+            }
+            td {
+                padding-bottom: 100px;
+            }
+            td {
+                vertical-align: top;
             }
             i {
                 color: #f2a07b;
+                margin-bottom: 20px;
             }
             i:hover {
                 color: #c87941;
@@ -66,10 +73,10 @@
         <p>This is the nginx web server. Select a service.</p>
 
         <h2>Available services:</h2><br/>
-        <table style="text-align:center">
-            <tr style="vertical-align:top">
-                <td>
-                    <a href="http://192.168.99.125:5050"><i class="fab fa-wordpress-simple fa-4x"></i></a>
+        <table width="75%" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="25%">
+                    <a style="margin-left: 20px;" href="http://192.168.99.125:5050"><i class="fab fa-wordpress-simple fa-4x"></i></a>
                     <h3><a href="http://192.168.99.125:5050">WordPress</a></h3>
                     <p>user:<em> wp_admin</em><br/>
                     password:<em> admin</em></p>
@@ -78,29 +85,27 @@
                     <p>user:<em> wp_author</em><br/>
                     password:<em> author</em></p>
                 </td>
-                <td>
-                    <a href="http://192.168.99.124:5000"><i class="fas fa-database fa-4x"></i></a>
+                <td width="25%">
+                    <a style="margin-left: 30px;" href="http://192.168.99.124:5000"><i class="fas fa-database fa-4x"></i></a>
                     <h3><a href="http://192.168.99.124:5000">phpMyAdmin</a></h3>
                     <p>user:<em> root</em><br/>
                     password:<em> root</em></p>
                 </td>
-                <td>
-                    <a href="http://192.168.99.126:3000"><i class="far fa-sun fa-4x"></i></a>
+                <td width="25%">
+                    <a style="margin-left: 5px;" href="http://192.168.99.126:3000"><i class="far fa-sun fa-4x"></i></a>
                     <h3><a href="http://192.168.99.126:3000">Grafana</a></h3>
                     <p>user:<em> admin</em><br/>
                     password:<em> admin</em></p>
                 </td>
             </tr>
-        </table>
-        <table style="text-align:left;padding-top: 100px;padding-left: 150px;">
-            <tr style="vertical-align:top">
-                <td style="padding-right: 90px">
+            <tr>
+                <td width="50%">
                     <h3>SSH</h3>
                     <p>[ssh root@192.168.99.128]<br/>
                     user:<em> root</em><br/>
                     password:<em> root</em></p>
                 </td>
-                <td>
+                <td width="50%">
                     <h3>FTPS Server</h3>
                     <p>upload: [curl ftp://192.168.99.127:21 --ssl -k --user user -T <em>FILE_NAME</em>]<br/>
                     download: [curl ftp://192.168.99.127:21/<em>FILE_NAME</em> --ssl -k --user user -o <em>direction/FILE_NAME]</em><br/>
