@@ -6,11 +6,11 @@
 #    By: fulldemo <fulldemo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 17:44:37 by fulldemo          #+#    #+#              #
-#    Updated: 2020/10/21 18:56:18 by fulldemo         ###   ########.fr        #
+#    Updated: 2021/02/03 19:56:46 by fulldemo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FROM alpine:latest
+FROM alpine:3.12.0
 
 #Install MAriaDB
 RUN apk update && \

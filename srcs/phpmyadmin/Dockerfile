@@ -6,11 +6,11 @@
 #    By: fulldemo <fulldemo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/04 12:40:45 by fulldemo          #+#    #+#              #
-#    Updated: 2020/10/21 19:13:28 by fulldemo         ###   ########.fr        #
+#    Updated: 2021/02/03 19:56:46 by fulldemo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FROM alpine:latest
+FROM alpine:3.12.0
 
 RUN apk update &&\
 	apk add openrc &&\
