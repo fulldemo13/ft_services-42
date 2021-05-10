@@ -27,3 +27,15 @@ To run the services you need to have installed [**VirtualBox**](https://www.virt
 - To run the services: sh start.sh
 - To shut down the services: sh start.sh clean
 - To remove the minikube: sh start.sh fclean
+<br/>
+<br/>
+
+### Nginx:
+
+<img align="center" src="img/nginx_html.png" alt="Screenshot of the game" />
+<br/>
+<br/>
+
+### Grafana:
+
+<img align="center" src="img/grafana.png" alt="Screenshot of the game" />
